@@ -1,0 +1,28 @@
+{
+  "name": "online_examination",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --ignore sessions/ app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "docx-generator": "0.0.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "hbs": "^4.0.4",
+    "mongodb": "^3.1.13",
+    "mongoose": "^5.4.2",
+    "nodemon": "^1.18.7",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "randomatic": "^3.1.1",
+    "shortid": "^2.2.14",
+    "uid": "0.0.2",
+    "uuid": "^3.3.2"
+  }
+}

@@ -1,0 +1,37 @@
+body {
+    background: url(../images/image4.gif);
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-size: cover;
+    width: 99%;
+}
+
+.elem {
+    font-size: 20pt;
+    margin-left: 20%;
+    margin-top: 10px;
+    color: white;
+    font-family: 'Merriweather', serif;
+}
+
+#main {
+    width: 40%;
+    margin-left: 28%;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.elem:hover {
+    background-color: border-box;
+    color: black;
+    cursor: pointer;
+}
+
+#error {
+    margin-left: 36.5%;
+    background-color: rgba(255, 0, 0, 0.2);
+    width: 23%;
+    height: 5%;
+    border: 2px solid red;
+}

@@ -1,0 +1,146 @@
+﻿<html>
+
+<head>
+    <title>{{code}}</title>
+    <link rel="stylesheet" href="../public/stylesheets/Lecturer.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../public/javascripts/Lecturer.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+       
+    </script>
+</head>
+
+<body>
+    <div id='control'>
+        <span>{{firstname}} {{lastname}}</span>
+        <input type="submit" id='logout' value="Դուրս գալ">
+        <input type="submit" id='save_send' value="Հաստատել">
+        <input type="submit" id='create_questionnaire' value="Ստեղծել հարցատոմս">
+        <input type="submit" id='add_questionnaire' value="Ավելացնել հարց">
+        <input type="submit" id='allow' value="Սկսել քննությունը">
+        <input type="text" id="gr">
+        <form method="POST" action="/logout"></form>
+    </div>
+    <input type='number' id='point'>
+    <br>
+    
+    <div id='insert' style="display:none;">
+        <div style="height:10%;">
+            <input type="text" class='input1 form-control' id='question' placeholder="Հարց" style="width:90.5%;"><br>
+            <input type="text" class='input1 form-control' id='answer1' placeholder="Պատասխան 1"
+                style="width:90.5%;"><br>
+            <input type="text" class='input1 form-control' id='answer2' placeholder="Պատասխան 2"
+                style="width:90.5%;"><br>
+            <input type="text" class='input1 form-control' id='answer3' placeholder="Պատասխան 3"
+                style="width:90.5%;"><br>
+            <input type="text" class='input1 form-control' id='theme' placeholder="Թեմա" style="width:90.5%;"><br>
+            <select class="form-control" id="c2" style="width:27%;">
+                <option>Ճիշտ պատասխան</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select><br>
+            <input type="number" class='input1 form-control' id='point' placeholder="Միավոր" style="width:15%;"><br>
+            <input type="submit" id='savequestion' class="btn btn-primary" value="Պահպանել"
+                style="width:20%; height:30px;">
+            <input type="submit" id='close' class="btn btn-primary" value="Փակել" style="width:20%; height:30px;">
+        </div>
+    </div>
+
+    <div id='tbl'>
+        <div id='accordion'>
+
+        </div>
+        <!--  <table id="table">
+            <thead>
+                <tr>
+                    <th>Հարց</th>
+                    <th>Պատասխան 1</th>
+                    <th>Պատասխան 2</th>
+                    <th>Պատասխան 3</th>
+                    <th>Պատասխան 4</th>
+                    <th>Ճիշտ պատասխան</th>
+                    <th>Միավոր</th>
+                </tr>
+            </thead>
+        </table>-->
+    </div>
+
+
+
+
+    <div id='tbl_2' style="display:none">
+        <table id="table_2">
+            <thead>
+                <tr>
+                    <th>Անուն</th>
+                    <th>Ազգանուն</th>
+                    <th>Հայրանուն</th>
+                    <th>Թույլատրել</th>
+                </tr>
+            </thead>
+        </table><br>
+        <button class="btn btn-primary" id="allow_st" style="margin-left:23%;width:10%;">Սկսել</button>
+    </div>
+
+
+    <div id='dialog' style="display:none">
+        <div>
+            <select class="form-control" id="c1" style="width:55%;">
+                <option>Ընդհանուր միավորների քանակը</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+
+
+        <div>
+            <select class="form-control" id="c2" style="width:55%;">
+                <option>Ուսանողին տրվող ժամանակը</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+            </select>
+
+        </div>
+
+        <div>
+            <select class="form-control" id="t1" style="width:55%;">
+                <option>Հարցատոմսի ստեղծում</option>
+                <option value="auto">Ավտոմատ</option>
+                <option value="lecturer">Դասախոսի կողմից</option>
+            </select>
+
+        </div>
+        <div id="list" class="form-inline">
+            <select class="form-control t2" id="t2" style="width:55%;">
+                <option>Հարցատոմսում ներառվող թեմանները</option>
+                <option value="Համաչափ համակարգեր">Համաչափ համակարգեր</option>
+                <option value="Հիմնական սահմանումներ">Հիմնական սահմանումներ</option>
+                <option value="Գաղտնագրային համակարգերի տեսակները">Գաղտնագրային համակարգերի տեսակները</option>
+                <option value="Անհամաչափ համակարգեր">Անհամաչափ համակարգեր</option>
+                <option value="Հեշ ֆունկցիաներ">Հեշ ֆունկցիաներ</option>
+            </select>
+            <span id="add" class="btn btn-primary" style="width: 20%;"> Ավելացնել թեմա</span>
+            <span id="create" class="btn btn-primary" style="width: 20%;"> Պահպանել</span>
+            <br><br>
+        </div>
+
+
+
+
+        
+
+
+</body>
+
+</html>

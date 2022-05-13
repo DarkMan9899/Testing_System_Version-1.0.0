@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>
+
+    </title>
+
+
+    <link rel="stylesheet" href="../public/stylesheets/Student.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+    <script src="../public/javascripts/Student.js"></script>
+    <script>
+        $(document).ready(function () {
+            //   doc.fromHTML($('#for_std').html())
+            //var doc = new jsPDF();
+            //doc.save('First.pdf');
+            /* $('#save_pdf').click(function(){
+         var doc = new jsPDF();
+         doc.text(20, 20, 'Hello landscape world!');
+         
+         doc.save('First.pdf');
+             })*/
+            $('#save_pdf').click(function () {
+                var doc = new jsPDF();
+
+                doc.text(50, 50, 'Hello World աաասսս');
+                /*  doc.text(12, 12,
+                      'Ուսանող`' + user.flp +
+                      'Խումբ` ' + user.groupe +
+                      'Առարկա` ' + user.subject +
+                      'Դասախոս`' + user.lecturer +
+                      'Հարցերի քանակ`' + user.count1 +
+                      'Միավորների քանակ` ' + user.count2 +
+                      'Ստացած միավորը`' + user.count1);
+                     // doc.setLanguage("en-US");
+                     */
+
+                //doc.text(20, 60, '³³ë¹ ասդֆֆ çíí·· ջջջվվ');
+                doc.save('First.docx');
+            });
+        })
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <div id='control'>
+        <span>{{firstname}} {{lastname}}</span>
+
+        <button type="submit" class="btn btn-primary" id='logout'>Դուրս գալ</button>
+        <form id="form" method="POST" action="/logout">
+        </form>
+    </div>
+
+    <div class="main">
+        <div class="side" id="side1" style="background-color:#aaa;">
+            <fieldset id="timer">
+                <span id="min"></span>
+                <span id="sec"></span><br>
+            </fieldset>
+        </div>
+        <div class="side" id="side2" style="background-color:#bbb;">
+
+        </div>
+
+
+        <div id="for_std">
+            <div><span>Ուսանողի Ա.Ա.Հ` </span><span id="flp"></span></div>
+            <div><span>Խումբ` </span><span id="groupe"></span></div>
+            <div><span>Առարկա` </span><span id="subject"></span></div>
+            <div><span>Դասախոս` </span><span id="lecturer"></span></div>
+            <div><span>Հարցերի քանակ` </span><span id="count1"></span></div>
+            <div><span>Միավորների քանակ` </span><span id="count2"></span></div>
+            <div><span>Ստացած միավորը` </span><span id="count3"></span></div>
+            <div id="correct"></div>
+            
+        </div>
+
+        <dev id="confirm">
+            <input type="text" class="form-control" id="sec_code">
+        </dev>
+</body>
+
+</html>

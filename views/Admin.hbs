@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>{{code}}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../public/javascripts/Admin.js"></script>
+    <link rel="stylesheet" href="../public/stylesheets/admin.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <div id='control'>
+        <span>{{firstname}} {{lastname}}</span>
+        <input type="submit" id='logout' value="Դուրս գալ">
+        <input type="submit" id='save_send' value="Հաստատել">
+        
+        <form method="POST" action="/logout" id="logout"></form>
+    </div><br>
+    <!--content edit ables div-->
+    <div contenteditable="true" style="background-color:red; width:14%; height:4%; font-size:12pt;" hidden></div>
+
+    <fieldset id='insert'>
+        <input type="text" class='input1' id='fname' placeholder="Անուն">
+        <input type="text" class='input1' id='lname' placeholder="Ազգանուն">
+        <input type="text" class='input1' id='patr' placeholder="Հայրանուն">
+        <input type="text" class='input1' id='article' placeholder="Առարկա">
+        <input type="text" class='input1' id='username' placeholder="Մուտքանուն">
+        <input type="text" class='input1' id='password' placeholder="Գաղտնաբառ">
+        <input type="submit" id='save' value="Պահպանել">
+    </fieldset>
+
+    <div id='tbl'>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Անուն</th>
+                    <th>Ազգանուն</th>
+                    <th>Հայրանուն</th>
+                    <th>Առարկա</th>
+                    <th>Մուտքանուն</th>
+                    <th>Գաղտնաբառ</th>
+                    <th>Անվտանգ. կոդ</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+
+
+</body>
+
+</html>

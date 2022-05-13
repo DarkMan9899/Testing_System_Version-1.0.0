@@ -1,0 +1,51 @@
+#control #logout {
+   
+    width: 10%;
+  margin-top: 0.5%;
+  float: right;
+  margin-right: 2%;
+}
+
+#control span {
+    margin-left: 5%;
+    font-size: 20pt;
+}
+
+
+.side {
+    float: left;
+    padding: 10px;
+    height: 90%; 
+  }
+
+  #side1{
+    border-bottom: 3px dashed black;
+    border-left: 3px dashed black;
+    border-top: 3px dashed black;
+    width: 30%;
+  }
+
+  #side2{
+      border: 3px dashed black;
+    width: 70%;
+    overflow-y: auto;
+  }
+
+  #side1 button{
+      margin-top: 5%;
+      margin-left: 35%;
+      width: 30%;
+  }
+  #timer{
+      background-color: red;
+      font-size: 80pt;
+      padding-top: 5%;
+      text-align: center;
+      height: 40%;
+  }
+
+  #for_std div{
+      width: 100%;
+      height: 6%;
+  }
+  

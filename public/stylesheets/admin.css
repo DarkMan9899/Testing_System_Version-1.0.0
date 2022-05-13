@@ -1,0 +1,72 @@
+.btn {
+    width: 100%;
+}
+
+.glyphicon:hover {
+    cursor: pointer;
+    color: red;
+}
+
+table th {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: #fff;
+    text-align: center;
+}
+
+table thead {
+    text-align: center;
+}
+
+textarea{
+    height: 25px;
+}
+
+#tbl {
+    height: 82%;
+    overflow-y: scroll;
+}
+
+#control input {
+    float: right;
+    width: 13%;
+    height: 5%;
+    background-color: blue;
+    color: white;
+}
+
+#control #gr{
+    background-color: white;
+    color: black;
+}
+#control span {
+    margin-left: 5%;
+    font-size: 20pt;
+}
+
+#save {
+    margin-left: 1.1%;
+    width: 13%;
+    height: 4.3%;
+    background-color: blue;
+    color: white;
+}
+
+
+#insert .input1 {
+    width: 14%;
+}
+
+#insert {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+#insert #point {
+    width: 5%;
+}
+
+.input{
+    resize: horizontal;
+}
